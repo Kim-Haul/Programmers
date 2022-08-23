@@ -1,0 +1,6 @@
+function solution(numbers) {
+    let sum = 0
+    numbers.forEach((v,i) => sum += v)
+    return 45 - sum
+    
+}
