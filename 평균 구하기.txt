@@ -1,0 +1,6 @@
+function solution(arr) {
+    let len = arr.length
+    let sum = 0
+    let NewArr = arr.map((v,i)=>{ sum += v })
+    return sum / len
+}
