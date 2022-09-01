@@ -1,0 +1,15 @@
+function solution(numbers) {
+    let sum = []
+    for ( i = 0; i < numbers.length - 1; i ++ ) {
+        for ( j = i + 1; j < numbers.length; j ++ ) {
+            sum.push(numbers[i] + numbers[j])
+        }
+    }
+    
+    sum.sort((a,b) => a-b)
+    // let newSum = sum.filter((v,i) => sum.indexOf(v) == i)
+    // return newSum
+    
+    let newSum = [...Set(sum)]
+    return newSum
+}
