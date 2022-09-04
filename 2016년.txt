@@ -1,0 +1,18 @@
+function solution(a, b) {
+    let week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+    let month = [31,29,31,30,31,30,31,31,30,31,30,31]
+    let day = b + 4
+    
+    for ( i = 0; i < a - 1; i ++ ) {
+        day += month[i]
+    }
+    return week[day%7]
+    
+}
+
+
+// function solution(a, b) {
+//     let week = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+//     let day = new Date(2016, a - 1, b).getDay()
+//     return week[day]
+// }
