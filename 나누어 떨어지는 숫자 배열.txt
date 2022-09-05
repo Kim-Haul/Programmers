@@ -1,0 +1,5 @@
+function solution(arr, divisor) {
+    // let newArr = arr.filter((v,i) => {return (v % divisor == 0)})
+    let newArr = arr.filter((v,i) => v % divisor == 0)
+    return  newArr.length > 0 ? newArr.sort((a,b) => a-b) : [-1]
+}
