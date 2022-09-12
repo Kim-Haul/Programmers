@@ -1,0 +1,17 @@
+function solution(n, m) {
+    let tempGcd = []
+    let gcd = 0
+    for ( i = 1; i <= n; i ++ ) {
+        n % i == 0 ? tempGcd.push(i) : null
+    }
+    tempGcd.reverse()
+    
+    for ( i = 0; i < tempGcd.length; i ++ ) {
+        if (m % tempGcd[i] == 0 ) {
+            gcd = tempGcd[i]
+            break;
+        }
+    }
+    
+    return [gcd, n * m / gcd]
+}
