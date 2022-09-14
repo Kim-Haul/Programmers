@@ -1,0 +1,6 @@
+function solution(x) {
+    let sum = 0
+    x.toString().split('').map((v,i) => sum += Number(v))
+
+    return x % sum == 0 ? true : false
+}
