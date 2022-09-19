@@ -1,0 +1,30 @@
+function solution(A,B){
+    
+    A.sort((a,b) => a-b)
+    B.sort((a,b) => b-a)
+    
+    let sum = 0
+    
+    A.map((v,i) => sum += v * B[i])
+    return sum
+
+
+}
+
+
+// function solution(A,B){
+    
+    
+   
+//     let len = A.length
+//     let sum = 0
+//     for ( i = 0; i < len; i ++ ) {
+        
+//         let min = Math.min(...A)
+//         let max = Math.max(...B)
+//         sum += min * max
+//         A.splice(A.indexOf(min),1)
+//         B.splice(B.indexOf(max),1)
+//     }
+//     return sum
+// }
