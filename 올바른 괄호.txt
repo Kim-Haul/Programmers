@@ -1,0 +1,9 @@
+function solution(s){
+    let stack = 0
+    for ( i = 0; i < s.length; i ++ ) {
+        s[i] == '(' ? stack += 1 : stack -= 1
+        if(stack == -1) return false
+    }
+    
+    return stack == 0 ? true : false
+}
