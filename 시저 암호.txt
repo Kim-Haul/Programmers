@@ -1,0 +1,34 @@
+function solution(s, n) {
+    let ans = ""
+    for( i = 0; i < s.length; i ++ ) {
+        
+        if ( s[i] == " " ) {
+            ans += ' '
+            continue;
+        }
+        
+        let word = s.charCodeAt(i)
+        let wordPlus = s.charCodeAt(i) + n
+        
+        
+        if (65 <= word && word <= 90) {
+            if (65 <= wordPlus && wordPlus <= 90) {
+                ans += String.fromCharCode(wordPlus)
+            } else {
+                wordPlus -= 26
+                ans += String.fromCharCode(wordPlus)     
+            }
+        }
+
+    
+        if (97 <= word && word <= 122) {
+          if (97 <= wordPlus && wordPlus <= 122) {
+                ans += String.fromCharCode(wordPlus)
+            } else {
+                wordPlus -= 26
+                ans += String.fromCharCode(wordPlus)     
+            }
+        }
+    }
+    return ans
+}
