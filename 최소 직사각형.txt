@@ -1,0 +1,19 @@
+function solution(sizes) {
+    
+    let left = []
+    let right = []
+        
+    for ( i = 0; i < sizes.length; i ++ ) {
+        let temp = 0
+        
+        if ( sizes[i][0] < sizes[i][1]) {
+            temp = sizes[i][0]
+            sizes[i][0] = sizes[i][1]
+            sizes[i][1] = temp 
+        }
+        
+        left.push(sizes[i][0])
+        right.push(sizes[i][1])
+    }
+            return Math.max(...left) * Math.max(...right)
+}
