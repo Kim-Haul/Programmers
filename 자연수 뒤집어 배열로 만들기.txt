@@ -1,0 +1,6 @@
+function solution(n) {
+    let el = n.toString().split('')
+    let list = el.map((v,i) => Number(v)).reverse()
+    return list
+  
+}
