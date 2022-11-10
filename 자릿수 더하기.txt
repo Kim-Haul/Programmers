@@ -1,0 +1,10 @@
+function solution(n)
+{
+    let sum = 0
+    let list = n.toString().split('')
+    // split는 문자열을 배열로
+    // join은 배열을 문자열로
+    let Newlist = list.map((v,i) => sum += Number(v))
+    
+    return sum
+}
